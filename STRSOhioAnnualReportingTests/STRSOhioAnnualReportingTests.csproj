@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CSVToFixedWidth\STRSOhioAnnualReporting.csproj" />
+    <ProjectReference Include="..\STRSOhioAnnualReporting\STRSOhioAnnualReporting.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="FluentAssertions" />

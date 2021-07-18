@@ -12,9 +12,6 @@
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSVToFixedWidth\STRSOhioAnnualReporting.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="sample2.csv" />
   </ItemGroup>
   <ItemGroup>
@@ -26,5 +23,8 @@
     <EmbeddedResource Include="sample2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STRSOhioAnnualReporting\STRSOhioAnnualReporting.csproj" />
   </ItemGroup>
 </Project>
