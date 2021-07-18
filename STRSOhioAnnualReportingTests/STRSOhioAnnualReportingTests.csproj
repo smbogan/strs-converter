@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSVToFixedWidth\STRSOhioAnnualReporting.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FluentAssertions" />
+    <None Remove="sample1.csv" />
+    <None Remove="sample1 %28copy%29.csv" />
+    <None Remove="bsample1.dat" />
+    <None Remove="sample2.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sample1.csv" />
+    <EmbeddedResource Include="sample2.csv" />
+    <EmbeddedResource Include="sample1.dat" />
+    <EmbeddedResource Include="sample2.dat" />
+  </ItemGroup>
+</Project>
